@@ -14,7 +14,8 @@
 
       <agm-map [latitude]='curentLocalisation[0]' [longitude]='curentLocalisation[1]' [zoom]='zoom'>
 
-        <agm-marker *ngFor="let marker of finalMarker" [latitude]="marker.lat" [longitude]="marker.long">
+        <agm-marker *ngFor="let marker of finalMarker" [latitude]="marker.lat" [longitude]="marker.long"
+                    [iconUrl]="icon">
           <agm-info-window #infoWindow>
 
             <p class="h2">Station: {{ marker.name }}</p>

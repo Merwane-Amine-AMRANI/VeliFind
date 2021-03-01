@@ -8,6 +8,14 @@ import { PointMarker } from '../../models/models';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
+  // Custom icon
+  icon = {
+    url: './assets/bikeMarker.png',
+    scaledSize: {
+      width: 60,
+      height: 55
+    }
+  };
 
   constructor(private mapService: StationsService) {
   }
@@ -33,7 +41,7 @@ export class MapsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getLocation();
-    this.mapService.getStations().subscribe(res => {
+    this.mapService.getAllStation().subscribe(res => {
       this.marker = res.records.map(r => r.fields);
       this.finalMarker = [];
 

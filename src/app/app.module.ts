@@ -4,15 +4,25 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { StationsComponent } from './components/stations/stations.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MapsComponent } from './components/maps/maps.component';
 import { AppRoutingModule } from './app-routing.module';
 import {AgmCoreModule} from '@agm/core';
 import {RouterModule} from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { CompenentsComponent } from './components/compenents/compenents.component';
 import { AboutComponent } from './components/about/about.component';
+import { ListComponent } from './components/list/list.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { HeadersComponent } from './partials/headers/headers.component';
+import { FootersComponent } from './partials/footers/footers.component';
+
 
 
 @NgModule({
@@ -21,15 +31,30 @@ import { AboutComponent } from './components/about/about.component';
     StationsComponent,
     MapsComponent,
     HomeComponent,
-    CompenentsComponent,
-    AboutComponent
+    AboutComponent,
+    ListComponent,
+    HeadersComponent,
+    FootersComponent,
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule, AppRoutingModule, BrowserAnimationsModule,
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA7zn6DIXiAwixrn9TeJ6zskwUyGGMeTg0',
       libraries: ['places']
-    }), RouterModule
+    }),
+    RouterModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatAutocompleteModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

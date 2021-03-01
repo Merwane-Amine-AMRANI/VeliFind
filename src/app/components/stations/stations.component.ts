@@ -17,7 +17,7 @@ export class StationsComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-     this.service.getStations().subscribe(res => {
+     this.service.getAllStation().subscribe(res => {
        this.stations = res.records.map(r => r.fields);
        this.finalStations = this.stations;
        console.log(this.finalStations);

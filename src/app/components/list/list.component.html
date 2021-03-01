@@ -1,0 +1,62 @@
+<div id="main">
+  <div id="menu">
+    <section>
+      <form [formGroup]="nameSearchForm" class="search-form-container" >
+        <mat-form-field color="primary" appearance="outline">
+          <mat-label>Commune</mat-label>
+          <input  type="text"
+                  placeholder="Pick one"
+                  aria-label="Number"
+                  matInput
+                  [formControl]="control"
+                  [matAutocomplete]="auto" [(ngModel)]="searchStations"
+                  (click)="onClick()"
+                  (keyup)="searchStation()">
+          <button mat-raised-button color="basic" (click)="searchStation()">
+            <mat-icon svgIcon="Search" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+          </button>
+
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let complete of filteredAutoComplete | async" [value]="complete">
+              {{complete}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      <mat-selection-list multiple="false" #filtre>
+        <mat-list-option *ngFor="let filtre of filtres" (click)="onSelect(filtre)">
+          {{filtre}}
+        </mat-list-option>
+        <button mat-raised-button color="basic" (click)="reset()">RESET </button>
+      </mat-selection-list>
+
+    </section>
+    <section>
+      <div id="result">
+        <mat-list role="list">
+          <mat-list-item role="listitem">Vélo electrique: {{station.selectedOptions.selected[0]?.value.ebike}}</mat-list-item>
+          <mat-list-item role="listitem">Vélo mécanique: {{station.selectedOptions.selected[0]?.value.mechanical}}</mat-list-item>
+          <mat-list-item role="listitem">Arrondissement: {{station.selectedOptions.selected[0]?.value.nom_arrondissement_communes}}</mat-list-item>
+          <mat-list-item role="listitem">Places disponibles: {{station.selectedOptions.selected[0]?.value.numdocksavailable}}</mat-list-item>
+          <mat-list-item role="listitem">vélo disponible: {{station.selectedOptions.selected[0]?.value.numbikesavailable}}</mat-list-item>
+        </mat-list>
+      </div>
+    </section>
+  </div>
+
+  <div id="contenu">
+    <div class="ex-container">
+      <mat-card>
+        <section>
+          <mat-selection-list #station [multiple]="false">
+            <mat-list-option *ngFor="let station of finalStations;let i = index" [value]="station">
+              {{station.name}}
+            </mat-list-option>
+
+          </mat-selection-list>
+        </section>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

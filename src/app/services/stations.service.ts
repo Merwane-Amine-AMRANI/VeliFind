@@ -15,7 +15,7 @@ export class StationsService {
   constructor(private http: HttpClient) {
   }
 
-  getStations(): Observable<any> {
+  getAllStation(): Observable<any> {
     return this.http.get<any>(this.url); }
 
   // @ts-ignore
