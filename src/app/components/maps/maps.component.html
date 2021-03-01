@@ -1,0 +1,36 @@
+<div class="para" xmlns:staion="http://www.w3.org/1999/xhtml">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Carte des stations</a>
+
+
+    <input type="text" class="input-sm form-control" (keydown.enter)="$event.preventDefault()"
+           placeholder="Nom de station..." autocorrect="on" autocapitalize="off" spellcheck="off" type="text" #search>
+  </nav>
+  <!--////////////////////////////////////////////-->
+  <div class="container">
+    <div class="container" *ngIf="finalMarker">
+
+      <h1>MAPS</h1>
+
+      <agm-map [latitude]='curentLocalisation[0]' [longitude]='curentLocalisation[1]' [zoom]='zoom'>
+
+        <agm-marker *ngFor="let marker of finalMarker" [latitude]="marker.lat" [longitude]="marker.long">
+          <agm-info-window #infoWindow>
+
+            <p class="h2">Station: {{ marker.name }}</p>
+            <p *ngIf="marker.etat" class="font-weight-bold text-success">Disponible</p>
+            <p *ngIf="!marker.etat" class="font-weight-bold text-danger">Non Disponnible</p>
+            <p><span class="font-italic pr-1">Vélos disponibles :</span> {{ marker.bikes }}</p>
+            <p><span class="font-italic pr-1"> Emplacements disponibles :</span> {{ marker.places }}</p>
+
+          </agm-info-window>
+        </agm-marker>
+        <agm-circle [latitude]="curentLocalisation[0]" [longitude]="curentLocalisation[1]"
+                    [radius]="1000"
+                    [fillColor]="'red'">
+        </agm-circle>
+
+      </agm-map>
+    </div>
+  </div>
+</div>
