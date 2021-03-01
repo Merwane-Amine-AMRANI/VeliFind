@@ -1,1 +1,254 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Veli'Find</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Free Website Template" name="keywords">
+  <meta content="Free Website Template" name="description">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../../assets/brand_img.png" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Libraries -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="../../common/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../../common/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../../common/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="../../common/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Top Bar Start -->
+<div class="top-bar d-none d-md-block">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="offset-md-6 col-md-6">
+        <div class="top-bar-right">
+          <div class="social">
+            <a href="https://twitter.com/velib"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/Velib.Metropole"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/velibmetropole/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Top Bar End -->
+
+<!-- Nav Bar Start -->
+<div class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a href="../../../index.html" class="navbar-brand">
+      <img src="../../../assets/brand_img.png" alt="">
+      Veli'Find
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+      <div class="navbar-nav ml-auto">
+        <a href="../../../index.html" class="nav-item nav-link active">Home</a>
+        <a class="nav-item nav-link" (click)="toList()">Stations List</a>
+        <a class="nav-item nav-link" (click)="toMap()">Stations Map</a>
+        <a href="about.html" class="nav-item nav-link">About Us</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Nav Bar End -->
+
+
+<!-- Hero Start -->
+<div class="hero">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-5">
+        <div class="hero-text">
+          <h1>Welcome to our website</h1>
+          <p>
+            We help you find and rent a bicycle to help you get where you need to be easily.
+          </p>
+          <a class="btn" href="">Find it now</a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-7 d-none d-md-block">
+        <div class="hero-image">
+          <img src="../../../assets/img1.jpeg" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/HR-WQd07tJk" data-target="#videoModal">
+      <span></span>
+    </button>
+  </div>
+</div>
+<!-- Hero End -->
+
+<!-- Video Modal Start-->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Video Modal End -->
+
+<!-- Service Start -->
+<div class="service">
+  <div class="container">
+    <div class="section-header text-center">
+      <p>Our Salon Services</p>
+      <h2>Best Salon and Barber Services for You</h2>
+    </div>
+    <div class="row">
+      <div class="offset-lg-1 col-lg-4 col-md-6">
+        <div class="service-item">
+          <div class="service-img">
+            <img src="../../../assets/img3.jpg" alt="Image">
+          </div>
+          <h3>Find Stations</h3>
+          <p>
+            Find the nearest station.
+          </p>
+          <a class="btn" href="">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <div class="service-img">
+            <img src="../../../assets/img2.jpg" alt="Image" width="220px" height="200px">
+          </div>
+          <h3>Localisation</h3>
+          <p>
+            locate your station on map.
+          </p>
+          <a class="btn" href="">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Testimonial Start -->
+<div class="testimonial">
+  <div class="container">
+    <div class="owl-carousel testimonials-carousel">
+      <div class="testimonial-item">
+        <img src="assets/testimonial-1.jpg" alt="Image">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat. Fusce venenatis at lectus in malesuada. Suspendisse sit amet dolor et odio varius mattis.
+        </p>
+        <h2>Client Name</h2>
+        <h3>Profession</h3>
+      </div>
+      <div class="testimonial-item">
+        <img src="assets/testimonial-2.jpg" alt="Image">
+        <p>
+          Phasellus pellentesque tempus pretium. Quisque in enim sit amet purus venenatis porttitor sed non velit. Vivamus vehicula finibus tortor. Aliquam vehicula molestie pulvinar. Sed varius libero in leo finibus, ac consectetur tortor rutrum.
+        </p>
+        <h2>Client Name</h2>
+        <h3>Profession</h3>
+      </div>
+      <div class="testimonial-item">
+        <img src="assets/testimonial-3.jpg" alt="Image">
+        <p>
+          Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna non enim luctus interdum. Phasellus sed eleifend erat. Aliquam ligula ex, semper vel tempor pellentesque, pretium eu nulla.
+        </p>
+        <h2>Client Name</h2>
+        <h3>Profession</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial End -->
+
+
+<!-- Footer Start -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-contact">
+              <h2>Address</h2>
+              <p><i class="fa fa-map-marker-alt"></i>1 avenue du Général de Gaulle, 92 074 Paris La Défense cedex</p>
+              <p><i class="fa fa-phone-alt"></i>01 76 49 12 34</p>
+              <p><i class="fa fa-envelope"></i>service-client@velib-metropole.fr</p>
+              <div class="footer-social">
+                <a href="https://twitter.com/velib"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/Velib.Metropole"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/velibmetropole/"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="footer-newsletter">
+          <h2>Newsletter</h2>
+          <p>
+            All the news of Veli'Find not to be missed
+          </p>
+          <div class="form">
+            <input class="form-control" placeholder="Email goes here">
+            <button class="btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container copyright">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; <a href="#">Veli'Find</a>, All Right Reserved.</p>
+      </div>
+      <div class="col-md-6">
+        <p>Designed By <span>Merwane Amine Amrani - Aymene Adnane</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="./common/lib/easing/easing.min.js"></script>
+<script src="./common/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="./common/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="./common/lib/lightbox/js/lightbox.min.js"></script>
+
+
+<!-- Template Javascript -->
+<script src="common/js/main.js"></script>
+</body>
+</html>

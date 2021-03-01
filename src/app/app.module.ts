@@ -9,7 +9,7 @@ import { MapsComponent } from './components/maps/maps.component';
 import { AppRoutingModule } from './app-routing.module';
 import {AgmCoreModule} from '@agm/core';
 import {RouterModule} from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AboutComponent } from './components/about/about.component';
 import { ListComponent } from './components/list/list.component';
