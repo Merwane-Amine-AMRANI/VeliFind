@@ -145,7 +145,7 @@ export class ListComponent implements OnInit {
     return this.autoComplete.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
   }
 
-  onClick(){
+  autoComp(){
     this.autoComplete = this.commune.filter(this.isUnique);
     console.log(this.autoComplete);
     this.filteredAutoComplete = this.control.valueChanges.pipe(

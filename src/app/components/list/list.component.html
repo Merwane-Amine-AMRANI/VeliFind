@@ -73,7 +73,7 @@
                   matInput
                   [formControl]="control"
                   [matAutocomplete]="auto" [(ngModel)]="searchStations"
-                  (click)="onClick()"
+                  (keypress)="autoComp()"
                   (keyup)="searchStation()">
           <button mat-raised-button color="basic" (click)="searchStation()">
             <mat-icon svgIcon="Search" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
