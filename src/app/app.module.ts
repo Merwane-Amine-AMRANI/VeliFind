@@ -22,6 +22,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { HeadersComponent } from './partials/headers/headers.component';
 import { FootersComponent } from './partials/footers/footers.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -35,6 +36,7 @@ import { FootersComponent } from './partials/footers/footers.component';
     ListComponent,
     HeadersComponent,
     FootersComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
