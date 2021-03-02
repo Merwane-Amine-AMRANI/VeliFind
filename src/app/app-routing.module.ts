@@ -11,6 +11,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'velibs',
+    redirectTo: 'velibs/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'velibs/list',
     component: ListComponent,
   },

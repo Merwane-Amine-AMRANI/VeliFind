@@ -24,4 +24,8 @@ export class HomeComponent implements OnInit {
   toMap() {
     this.router.navigate(['velibs/maps']);
   }
+
+  toHome() {
+    this.router.navigate(['velibs/home']);
+  }
 }

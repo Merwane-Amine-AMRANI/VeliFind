@@ -7,7 +7,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {map, startWith} from 'rxjs/operators';
 import {MatIconRegistry} from '@angular/material/icon';
 import {MatSelectionList} from '@angular/material/list';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 const SEARCH_ICON = `
   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
@@ -38,6 +38,7 @@ export class ListComponent implements OnInit {
               private fb: FormBuilder,
               iconRegistry: MatIconRegistry,
               sanitizer: DomSanitizer,
+              private router: Router
               ) {
     this.stationFields = [];
     this.finalStations = [];
@@ -152,5 +153,15 @@ export class ListComponent implements OnInit {
       map(value => this._filter(value))
     );
   }
+  toList() {
+    this.router.navigate(['velibs/list']);
+  }
 
+  toMap() {
+    this.router.navigate(['velibs/maps']);
+  }
+
+  toHome() {
+    this.router.navigate(['velibs/home']);
+  }
 }

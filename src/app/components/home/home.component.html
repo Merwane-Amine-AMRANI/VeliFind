@@ -47,9 +47,9 @@
 <!-- Nav Bar Start -->
 <div  class=" navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid">
-    <a href="../home/home.component.html" class="navbar-brand">
+    <a (click)="toHome()" class="navbar-brand">
       <img src="../../../assets/brand_img.png" alt="">
-
+      <p class="nav-text">Veli'Find</p>
     </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -57,11 +57,9 @@
 
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
       <div class="navbar-nav ml-auto">
-        <a href="../home/home.component.html" class="nav-item nav-link active">Home</a>
+        <a class="nav-item nav-link active" (click)="toHome()">Home</a>
         <a class="nav-item nav-link" (click)="toList()">Stations List</a>
         <a class="nav-item nav-link" (click)="toMap()">Stations Map</a>
-        <a href="../about/about.component.html" class="nav-item nav-link">About</a>
-        <a href="../contact/contact.component.html" class="nav-item nav-link">Contact</a>
       </div>
     </div>
   </div>
@@ -79,7 +77,7 @@
           <p>
             We help you find and rent a bicycle to help you get where you need to be easily.
           </p>
-          <a class="btn" href="">Find it now</a>
+          <a class="btn" >Find it now</a>
         </div>
       </div>
       <div class="col-sm-12 col-md-7 d-none d-md-block">
@@ -111,7 +109,7 @@
           <p>
             Find the nearest station.
           </p>
-          <a class="btn" href="">Learn More</a>
+          <a class="btn" (click)="toList()">Learn More</a>
         </div>
       </div>
       <div class="col-lg-2">
@@ -126,7 +124,7 @@
           <p>
             locate your station on map.
           </p>
-          <a class="btn" href="">Learn More</a>
+          <a class="btn" (click)="toMap()">Learn More</a>
         </div>
       </div>
     </div>
@@ -135,41 +133,7 @@
 <!-- Service End -->
 
 <!-- Footer Start -->
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-contact">
-              <h2>Address</h2>
-              <p><i class="fa fa-map-marker-alt"></i>1 avenue du Général de Gaulle, 92 074 Paris La Défense cedex</p>
-              <p><i class="fa fa-phone-alt"></i>01 76 49 12 34</p>
-              <p><i class="fa fa-envelope"></i>service-client@velib-metropole.fr</p>
-              <div class="footer-social">
-                <a href="https://twitter.com/velib"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/Velib.Metropole"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/velibmetropole/"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="footer-newsletter">
-          <h2>Newsletter</h2>
-          <p>
-            All the news of Veli'Find not to be missed
-          </p>
-          <div class="form">
-            <input class="form-control" placeholder="Email goes here">
-            <button class="btn">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="container copyright">
     <div class="row">
       <div class="col-md-6">
@@ -180,7 +144,7 @@
       </div>
     </div>
   </div>
-</div>
+
 <!-- Footer End -->
 
 

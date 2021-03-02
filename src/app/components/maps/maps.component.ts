@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StationsService } from '../../services/stations.service';
 import { PointMarker } from '../../models/models';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-maps',
@@ -17,7 +18,8 @@ export class MapsComponent implements OnInit {
     }
   };
 
-  constructor(private mapService: StationsService) {
+  constructor(private mapService: StationsService,
+              private router: Router) {
   }
 
   marker: any[];
@@ -60,5 +62,15 @@ export class MapsComponent implements OnInit {
     });
   }
 
+  toList() {
+    this.router.navigate(['velibs/list']);
+  }
 
+  toMap() {
+    this.router.navigate(['velibs/maps']);
+  }
+
+  toHome() {
+    this.router.navigate(['velibs/home']);
+  }
 }
