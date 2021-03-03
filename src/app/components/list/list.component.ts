@@ -57,7 +57,9 @@ export class ListComponent implements OnInit {
   searchStation() {
     // tslint:disable-next-line:max-line-length
     this.finalStations = this.stationFields
-      .filter((Station) => Station.nom_arrondissement_communes.toLocaleLowerCase().includes(this.searchStations.toLocaleLowerCase()));
+      .filter((Station) => Station.nom_arrondissement_communes
+                                         .toLocaleLowerCase()
+                                         .includes(this.searchStations.toLocaleLowerCase()));
     this.searchedStation = this.finalStations;
   }
 

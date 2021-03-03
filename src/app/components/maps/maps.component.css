@@ -1,5 +1,5 @@
 agm-map {
-  height: 510px;
+  height: 600px;
 }
 
 .map {
@@ -33,10 +33,10 @@ section {
 
 }
 
-#main {
-  padding-top: 100px;
+.main {
+  margin-top: 100px;
+
   max-with:1100px;
-  margin:auto;
 }
 
 #result{
